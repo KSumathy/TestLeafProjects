@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNGGroups" verbose = "7">
+<parameter name="url" value="http://leaftaps.com/opentaps"></parameter>
+<parameter name="username" value="DemoSalesManager"></parameter>
+<parameter name="password" value="crmsfa"></parameter>
+<!-- <groups><run>
+	 <include name = "common"></include>
+	 <include name = "smoke"></include>
+	<include name = "sanity"></include>
+	<exclude name ="sanity"></exclude>
+	<exclude name = "regression"></exclude>
+</run></groups> -->
+  <test thread-count="5" name="TestLeads">
+    <classes>
+      <class name="week6.day1.TC001_LoginAndLogOut"/>       
+    <!--   <class name="week6.day1.TC003_EditLead"/> -->
+     <!--   <class name="week6.day1.TC005_DuplicateLead"/> -->
+       <!-- <class name="week6.day1.Tc004_DeleteLead"/>  -->
+    </classes>
+  </test>
+  <test name="test 2">
+  <classes>
+  <class name="week6.day1.Tc002_MergeLead"/>
+  </classes>
+  </test> <!-- TestLeads -->
+</suite> <!-- TestNGGroups -->
